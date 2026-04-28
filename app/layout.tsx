@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import SiteShell from '@/components/SiteShell';
 import React, { Suspense } from 'react';
+import { Analytics } from '@vercel/analytics/next';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -22,6 +23,7 @@ export default function RootLayout({
         <Suspense fallback={<div />}> 
           <SiteShell>{children}</SiteShell>
         </Suspense>
+        <Analytics />
       </body>
     </html>
   );
