@@ -1,4 +1,3 @@
-import type { Metadata } from 'next';
 import Link from 'next/link';
 import { getMovieDetails } from '@/lib/api';
 import { ChevronLeft, Star, Calendar, Monitor, Users, Info } from 'lucide-react';
@@ -9,22 +8,6 @@ import DownloadSection from '@/components/portal/DownloadSection';
 import ViewTracker from '@/components/ViewTracker';
 import LoadingImage from '@/components/portal/LoadingImage';
 
-export async function generateMetadata({
-   params,
-}: {
-   params: Promise<{ id: string }>;
-}): Promise<Metadata> {
-   const { id } = await params;
-   const movie = await getMovieDetails(id);
-
-   if (!movie) {
-      return {};
-   }
-
-   return {
-      title: movie.title,
-   };
-}
 
 /**
  * Movie Detail Page - Overhauled to match the provided reference UI.

@@ -31,7 +31,7 @@ export default async function HomePage() {
   };
 
   return (
-    <div className="max-w-6xl mx-auto py-8 space-y-12 sm:space-y-16 overflow-x-hidden">
+    <div className="max-w-6xl mx-auto py-8 space-y-12 sm:space-y-16">
       {/* Hero / Promo Area */}
       
 

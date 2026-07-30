@@ -16,7 +16,7 @@ export default function HomeLoading() {
               <div className="h-3 w-16 rounded-full bg-slate-100" />
             </div>
             
-            <div className="flex overflow-x-auto pb-6 pt-2 gap-3 sm:gap-5 scrollbar-hide" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+            <div className="flex w-full max-w-full overflow-x-auto pb-6 pt-2 gap-3 sm:gap-5 no-scrollbar overscroll-x-contain" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
               {Array.from({ length: 6 }).map((_, i) => (
                 <div key={i} className="shrink-0 w-[120px] sm:w-[150px] md:w-[180px] overflow-hidden rounded-2xl border border-portal-border bg-white shadow-sm">
                   <div className="relative aspect-[2/3] bg-gradient-to-br from-slate-200 via-slate-100 to-slate-200">
@@ -38,3 +38,4 @@ export default function HomeLoading() {
     </div>
   );
 }
+
